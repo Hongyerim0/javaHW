@@ -10,6 +10,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
+
+
 public class OpenChallenge9 extends JFrame{
    OpenChallenge9(){
        setTitle("Open Challenge 9"); // 프레임의 타이틀 달기
