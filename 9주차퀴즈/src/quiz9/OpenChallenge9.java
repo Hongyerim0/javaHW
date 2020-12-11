@@ -12,14 +12,14 @@ import javax.swing.JPanel;
 
 public class OpenChallenge9 extends JFrame{
    OpenChallenge9(){
-       setTitle("Open Challenge 9"); // ÇÁ·¹ÀÓÀÇ Å¸ÀÌÆ² ´Ş±â
+       setTitle("Open Challenge 9"); // í”„ë ˆì„ì˜ íƒ€ì´í‹€ ë‹¬ê¸°
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       // ÇÁ·¹ÀÓ À©µµ¿ì¸¦ ´İÀ¸¸é ÇÁ·Î±×·¥ Á¾·á
+       // í”„ë ˆì„ ìœˆë„ìš°ë¥¼ ë‹«ìœ¼ë©´ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
        Container c = getContentPane();
        c.setLayout(new BorderLayout()); 
-       // µğÆúÆ® °ªÀ¸·Î  ÀÌ ¹èÄ¡°ü¸®ÀÚ¸¦ °¡Áö°í ÀÖ±â ¶§¹®¿¡ µû·Î ¹èÄ¡°ü¸®ÀÚ ÁöÁ¤¾ÈÇØµµ µÊ
-       c.add(new NorthPanel(),BorderLayout.NORTH); // North ÆĞ³Î Ãß°¡
-       c.add(new CenterPanel(),BorderLayout.CENTER); // Center ÆĞ³Î Ãß°¡
+       // ë””í´íŠ¸ ê°’ìœ¼ë¡œ  ì´ ë°°ì¹˜ê´€ë¦¬ìë¥¼ ê°€ì§€ê³  ìˆê¸° ë•Œë¬¸ì— ë”°ë¡œ ë°°ì¹˜ê´€ë¦¬ì ì§€ì •ì•ˆí•´ë„ ë¨
+       c.add(new NorthPanel(),BorderLayout.NORTH); // North íŒ¨ë„ ì¶”ê°€
+       c.add(new CenterPanel(),BorderLayout.CENTER); // Center íŒ¨ë„ ì¶”ê°€
        setSize(300,300);
        setVisible(true);
         
@@ -30,7 +30,7 @@ public class OpenChallenge9 extends JFrame{
    }
     
 }
-class NorthPanel extends JPanel{ // NORTH¿¡ ºÙÀÏ ÆĞ³Î
+class NorthPanel extends JPanel{ // NORTHì— ë¶™ì¼ íŒ¨ë„
    NorthPanel(){
        setBackground(Color.LIGHT_GRAY);
        this.add(new JButton("Open"));
@@ -38,7 +38,7 @@ class NorthPanel extends JPanel{ // NORTH¿¡ ºÙÀÏ ÆĞ³Î
        this.add(new JButton("Close"));
    }
 }
-class CenterPanel extends JPanel{ // CENTER¿¡ ºÙÀÏ ÆĞ³Î
+class CenterPanel extends JPanel{ // CENTERì— ë¶™ì¼ íŒ¨ë„
    CenterPanel(){
        this.setLayout(null);
        String text[] = {"Hello", "Java", "Love"};
@@ -46,12 +46,13 @@ class CenterPanel extends JPanel{ // CENTER¿¡ ºÙÀÏ ÆĞ³Î
        int y;
        JLabel label;
        for(int i=0;i<3;i++) {
-           x = (int)(Math.random()*250); // ±ÛÀÚ Â©¸² ¹æÁö¸¦ À§ÇØ 50ÀÇ ¿©À¯¸¦ ³²±è
+           x = (int)(Math.random()*250); // ê¸€ì ì§¤ë¦¼ ë°©ì§€ë¥¼ ìœ„í•´ 50ì˜ ì—¬ìœ ë¥¼ ë‚¨ê¹€
            y = (int)(Math.random()*250);
            label = new JLabel(text[i]);
-           label.setLocation(x, y); // ·£´ıÀ§Ä¡¿¡ label ºÙÀÌ±â
-           label.setSize(50,10); // label Å©±â ¼³Á¤
+           label.setLocation(x, y); // ëœë¤ìœ„ì¹˜ì— label ë¶™ì´ê¸°
+           label.setSize(50,10); // label í¬ê¸° ì„¤ì •
            this.add(label);
        }
    }
 }
+
